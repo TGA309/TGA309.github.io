@@ -1,0 +1,103 @@
+/*  
+
+nothing: used to reference elements like body, header, etc.
+. : used to reference classes, need to define class as <div class = "smth">
+# : used to reference  ids, use sparingly and have unique name for all ids
+    define id using <div id = "smth" 
+
+* : applies to all elements.
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
+    background-image: url(images/SandstoneUniverse.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    height : 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+
+    /* background: linear-gradient(
+        to top right, 
+        #280137 0%, 
+        rgba(0, 0, 0, 0.6) 50%); */
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 32px;
+}
+
+.btn-1 {
+    overflow: hidden;
+    color: #000;
+    border-radius: 50px;
+    box-shadow: 0 0 0 0 rgba(29, 21, 87, 0.5), 0 0 0 0 rgba(95, 67, 183, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-1::after {
+    content: "";
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    top: -200px;
+    left: -150px;
+    background-color: transparent;
+    /* background-image: linear-gradient(225deg, #26caf8 0%, #dcd0ff 50%, #c625d0 100%); */
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn-1:hover {
+    transform: translate(0, -6px);
+    box-shadow: 40px -20px 25px 0 rgba(29, 21, 87, 0.5), -40px 15px 25px 0 rgba(95, 67, 183, 0.5);
+}
+
+.btn-1:hover::after {
+    transform: rotate(160deg);
+}
+
+/* button { - another good button look-wise
+
+    padding: 8px 25px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #ffa700;
+    border-radius: 20px;
+    color: #ffa700;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 6px 20px -5px rgba(0, 0, 0, 0.4);
+    cursor:pointer;
+} */
